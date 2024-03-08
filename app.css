@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #111;
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background: #222;
+}
+
+.clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.container .clip1 {
+  background: #f00;
+  background-image: url(https://img.freepik.com/free-photo/scene-from-other-worldly-life_936773-44.jpg?size=626&ext=jpg&ga=GA1.2.195282130.1674397611);
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(0 0, 48% 0, 19% 100%, 0% 100%);
+}
+
+.container .clip2 {
+  background: #0f0;
+  background-image: url(https://img.freepik.com/free-photo/scene-with-life-fantasy-extraterrestrial-planet_936773-19.jpg?size=626&ext=jpg&ga=GA1.2.195282130.1674397611);
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(43% 0, 100% 0, 40% 100%, 19% 100%);
+}
+
+.container .clip3 {
+  background: blue;
+  background-image: url(https://img.freepik.com/premium-photo/scene-from-other-worldly-life_936773-39.jpg?size=626&ext=jpg&ga=GA1.2.195282130.1674397611);
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 38% 100%);
+}
+
+/* .container:hover .clip {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+} */
+
+.container .clip:hover {
+  clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+}
+
+.container .clip .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  padding: 20px;
+  background: #fff;
+  opacity: 0;
+}
+
+.container .clip:hover .content {
+  bottom: 0;
+  opacity: 1;
+}
